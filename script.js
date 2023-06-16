@@ -22,9 +22,31 @@ let passed = false;
     ...
 */
 // **sua lógica a partir daqui**
-
-
-
+if (gender === "male") {
+    if (height >= 1.70) {
+        if (barReps >= 6 || barSeconds >= 15) {
+            if (abs >= 41) {
+                if ((runDistance >= 3 * 1000 && runTime <= 12 * 60) || (runDistance >= 5 * 1000 && runTime <= 20 * 60)) {
+                    if ((swimDistance >= 100 && swimTime <= 60) || diveTime <= 30) {
+                        passed = true;
+                    }
+                }
+            }
+        }
+    }
+} else if (gender === "female") {
+    if (height >= 1.60) {
+        if (barReps >= 4 || barSeconds >= 12) {
+            if (abs >= 41) {
+                if ((runDistance >= 4 * 1000 && runTime <= 15 * 60) || (runDistance >= 6 * 1000 && runTime <= 22 * 60)) {
+                    if ((swimDistance >= 100 && swimTime <= 60) || diveTime <= 30) {
+                        passed = true;
+                    }
+                }
+            }
+        }
+    }
+}
 /*
     Seu código deve conter apenas UM console.log, e ele deve ser o abaixo.
     Não altere nada pra baixo dessa linha, senão os testes não irão funcionar.
