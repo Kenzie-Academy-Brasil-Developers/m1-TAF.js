@@ -22,25 +22,26 @@ let passed = false;
     ...
 */
 // **sua lógica a partir daqui**
-if (gender === "male") {
-    if (height >= 1.70) {
-        if (barReps >= 6 || barSeconds >= 15) {
-            if (abs >= 41) {
-                if ((runDistance >= 3 * 1000 && runTime <= 12 * 60) || (runDistance >= 5 * 1000 && runTime <= 20 * 60)) {
-                    if ((swimDistance >= 100 && swimTime <= 60) || diveTime <= 30) {
-                        passed = true;
+
+if (gender === "male") { //Se o candidato for homem.
+    if (height >= 1.70) { //autura maxima de 1.70.
+        if (barReps >= 6 || barSeconds >= 15) { //repetições de barra ou segundos na barra. 
+            if (abs >= 41) { //repetições de barra ou segundos na barra. 
+                if ((runDistance >= 3 * 1000 && runTime <= 12 * 60) || (runDistance >= 5 * 1000 && runTime <= 20 * 60)) { //distancia da corrida comparado com o tempo do percurso.
+                    if ((swimDistance >= 100 && swimTime <= 60) || diveTime <= 30) { //distancia comparado com tempo de nataçao e tempo de mergulho.
+                        passed = true; //se todas as informaçoes a cima forem corretas o condidato passa
                     }
                 }
             }
         }
     }
-} else if (gender === "female") {
-    if (height >= 1.60) {
-        if (barReps >= 4 || barSeconds >= 12) {
-            if (abs >= 41) {
-                if ((runDistance >= 4 * 1000 && runTime <= 15 * 60) || (runDistance >= 6 * 1000 && runTime <= 22 * 60)) {
-                    if ((swimDistance >= 100 && swimTime <= 60) || diveTime <= 30) {
-                        passed = true;
+} else if (gender === "female") { //Se o candidato for mulher.
+    if (height >= 1.60) { //autura maxima de 1.70.
+        if (barReps >= 4 || barSeconds >= 12) { //repetições de barra ou segundos na barra. 
+            if (abs >= 41) { //repetições de barra ou segundos na barra. 
+                if ((runDistance >= 4 * 1000 && runTime <= 15 * 60) || (runDistance >= 6 * 1000 && runTime <= 22 * 60)) { //distancia da corrida comparado com o tempo do percurso.
+                    if ((swimDistance >= 100 && swimTime <= 60) || diveTime <= 30) { //distancia comparado com tempo de nataçao e tempo de mergulho.
+                        passed = true; //se todas as informaçoes a cima forem corretas o condidato passa.
                     }
                 }
             }
